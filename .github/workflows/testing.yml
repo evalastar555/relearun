@@ -22,6 +22,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -29,4 +31,8 @@ jobs:
 # Runs a single command using the runners shell
       - name: Test composer
         run: composer -v
+      - name: renommer fichier env
+        run: cp _.env.exempl .env
+      - name: installer vendor
+        run: composer install
 
