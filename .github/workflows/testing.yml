@@ -35,6 +35,6 @@ jobs:
         run: cp _.env.exempl .env
       - name: installer vendor
         run: composer install
-      -  name: création de la BDD
+      - name: création de la BDD
         run: php bin/console doctrine:database:create
 
